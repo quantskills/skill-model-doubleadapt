@@ -1,19 +1,9 @@
-# QuantSkills Skill Template
+# DoubleAdapt Multi-Factor Model
 
-[简体中文](README.md) | English
+[简体中文](README.md)
 
-This is the canonical `skill-template` repository, maintained by `abgyjaguo`, for creating catalog-contract v2 QuantSkills skills. The root `SKILL.md` describes this template repository; the copy-ready factor-evaluation declaration lives only in `references/declaration-example.yml`.
+This repository provides an independent community implementation of DoubleAdapt for cross-sectional stock return prediction, feature adaptation, label adaptation, and periodic signal inference.
 
-| Runtime | Entry point or thin adapter |
-| --- | --- |
-| Codex | `SKILL.md` |
-| Claude Code | `SKILL.md` |
-| Cursor | `agents/cursor-rule.mdc` → `SKILL.md` |
-| Hermes | `agents/portable-loader.md` → `SKILL.md` |
-| OpenClaw | `agents/openai.yaml` → `SKILL.md` |
+The model combines a base MLP with Feature Adapter and Label Adapter modules. Support dates provide the adaptation direction, while Query dates evaluate generalization after adaptation. Inference requires features only and does not require labels.
 
-Do not include secrets or private data. Cite upstream sources and preserve licenses. Quantitative projects must disclose data sources, assumptions, parameters, limitations, risk boundaries, and research-only scope; they must not promise returns or constitute investment advice. `qsh-form` is optional and independent from data-interface compatibility.
-
-## License
-
-`GPL-3.0-only`. See [LICENSE](LICENSE).
+This is an unofficial community implementation inspired by the published DoubleAdapt methodology. It does not include private data or internal experiment outputs.

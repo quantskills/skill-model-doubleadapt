@@ -1,8 +1,5 @@
 __pycache__/
 *.pyc
-.DS_Store
-# Git 卫生:原始导出与大数据不入库
+.venv/
+outputs/
 *.parquet
-prices/
-real_runs/
-sources/

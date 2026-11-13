@@ -1,0 +1,3 @@
+[console_scripts]
+doubleadapt-infer = doubleadapt.cli:infer_main
+doubleadapt-train = doubleadapt.cli:train_main
