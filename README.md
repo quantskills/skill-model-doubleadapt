@@ -40,6 +40,21 @@ python -m pip install -e .
 
 建议使用 Python 3.10 或更高版本。
 
+
+## 方法简介
+
+DoubleAdapt 面向非平稳股票预测任务，在基础预测网络之外加入两个适配模块：Feature Adapter 根据当前输入调整特征表达，Label Adapter 根据已成熟标签调整监督目标的尺度与偏移。训练时使用按时间切分的 Support/Query 任务，Support 用于计算适配方向，Query 用于评价适配后的泛化表现；推理阶段只使用特征和冻结的 checkpoint。
+
+## 参考论文
+
+本项目参考：
+
+- **DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting**
+- 论文链接：[ACM Digital Library](https://doi.org/10.1145/3580305.3599315)
+- 预印本：[arXiv:2306.09862](https://arxiv.org/abs/2306.09862)
+
+本仓库是独立的非官方社区实现，使用可配置的 MLP 预测骨干和适配器模块，不包含论文作者的官方代码。
+
 ## 快速开始
 
 生成合成样例并运行训练、推理：

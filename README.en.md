@@ -46,3 +46,16 @@ node scripts/validate-qsh-form.mjs SKILL.md
 ## License
 
 GPL-3.0-only. See [LICENSE](LICENSE).
+
+## Method overview
+
+DoubleAdapt targets non-stationary stock prediction by combining a base forecasting network with two adapters. The Feature Adapter adjusts the input representation, while the Label Adapter adjusts the scale and offset of mature supervision labels. Time-ordered Support/Query tasks are used for adaptation: Support data provides the adaptation direction and Query data evaluates post-adaptation generalization. Inference uses features and a frozen checkpoint only.
+
+## Reference paper
+
+This project is inspired by **DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting**.
+
+- [ACM Digital Library](https://doi.org/10.1145/3580305.3599315)
+- [arXiv:2306.09862](https://arxiv.org/abs/2306.09862)
+
+This repository is an independent, unofficial community implementation and does not include the authors' official code.
